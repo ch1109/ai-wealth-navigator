@@ -24,9 +24,13 @@ function HomeContent() {
     // 关闭移动端菜单
     setIsMobileMenuOpen(false);
 
-    // 更新URL参数
+    // 更新URL参数，保持语言参数
     const params = new URLSearchParams(searchParams.toString());
     params.set('section', sectionId);
+    // 确保语言参数存在
+    if (!params.has('lang')) {
+      params.set('lang', currentLanguage);
+    }
     router.push(`/?${params.toString()}`, { scroll: false });
 
     // 滚动到对应区域
@@ -56,7 +60,7 @@ function HomeContent() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-secondary">
         <div className="max-w-7xl mx-auto px-6 py-3 md:py-4 flex justify-between items-center">
           <div className="text-xl font-bold text-slate-900 tracking-tight" style={{ fontWeight: 700 }}>
-            AI 财富领航员
+            {currentLanguage === 'zh' ? 'AI 财富领航员' : 'AI ウェルス・ナビゲーター'}
           </div>
 
           {/* Desktop Navigation Links */}
@@ -64,20 +68,23 @@ function HomeContent() {
             <button
               onClick={() => navigateToSection('core-capabilities')}
               className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors duration-200"
+              data-translatable
             >
-              AI 投顾核心能力展示
+              {content.hero_cta_capabilities}
             </button>
             <button
               onClick={() => navigateToSection('sales-ai')}
               className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors duration-200"
+              data-translatable
             >
-              专业全能的销售 AI Agent
+              {content.hero_cta_sales_ai}
             </button>
             <button
               onClick={() => navigateToSection('interactive-demo')}
               className="text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors duration-200"
+              data-translatable
             >
-              AI 投顾功能演示
+              {content.hero_cta_demo}
             </button>
           </div>
 
@@ -106,20 +113,23 @@ function HomeContent() {
               <button
                 onClick={() => navigateToSection('core-capabilities')}
                 className="block w-full text-left text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors duration-200 py-2"
+                data-translatable
               >
-                AI 投顾核心能力展示
+                {content.hero_cta_capabilities}
               </button>
               <button
                 onClick={() => navigateToSection('sales-ai')}
                 className="block w-full text-left text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors duration-200 py-2"
+                data-translatable
               >
-                专业全能的销售 AI Agent
+                {content.hero_cta_sales_ai}
               </button>
               <button
                 onClick={() => navigateToSection('interactive-demo')}
                 className="block w-full text-left text-sm font-medium text-slate-600 hover:text-brand-primary transition-colors duration-200 py-2"
+                data-translatable
               >
-                AI 投顾功能演示
+                {content.hero_cta_demo}
               </button>
             </div>
           </div>
