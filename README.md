@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI 财富领航员 - 静态演示网站
 
-## Getting Started
+一个展示 AI 财富领航员核心功能的现代化静态演示网站，采用 Apple 风格设计，支持中日双语。
 
-First, run the development server:
+## ✨ 特性
+
+### 🎨 设计系统
+- **Apple 风格设计**: 简洁、优雅的视觉风格
+- **响应式布局**: 完美适配移动端、平板和桌面设备
+- **流畅动画**: 基于 Framer Motion 的高性能动画效果
+- **现代 UI**: 毛玻璃效果、渐变背景、微交互
+
+### 🌐 多语言支持
+- **中文/日文切换**: 完整的双语内容支持
+- **本地存储**: 记住用户语言偏好
+- **平滑过渡**: 语言切换时的淡入淡出效果
+
+### 🚀 交互式演示
+- **5步演示流程**: 展示 AI 投顾的完整工作流程
+- **自动播放**: 带进度指示的自动演示
+- **手动控制**: 用户可以随时暂停和跳转
+- **动态内容**: 实时图表和数据可视化
+
+### ⚡ 性能优化
+- **静态导出**: 无服务器依赖，快速加载
+- **代码分割**: 按需加载，优化首屏性能
+- **图片优化**: 自动压缩和格式优化
+- **SEO 友好**: 完整的元数据和结构化数据
+
+## 🛠️ 技术栈
+
+- **Next.js 15.5.3** - React 框架，App Router
+- **TypeScript** - 类型安全的 JavaScript
+- **Tailwind CSS v4** - 原子化 CSS 框架
+- **Framer Motion** - 动画库
+- **Lucide React** - 图标库
+
+## 🚀 快速开始
 
 ```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+访问 [http://localhost:3000](http://localhost:3000) 查看网站。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 构建部署
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# 构建生产版本
+npm run build
 
-## Learn More
+# 本地预览静态文件
+npm run preview
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+详细部署指南请查看 [DEPLOYMENT.md](./DEPLOYMENT.md)。
